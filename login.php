@@ -65,10 +65,10 @@ if(isset($_POST['login']))
 				<form class="loginform" method="post">
 						<p class="warning"><?php echo $message; ?></p>
 						<div>
-							<input type="text" name="username" class="splash-text" placeholder="Username" maxlength="20"/>
+							<input type="text" name="username" class="form-element" placeholder="Username" maxlength="20"/>
 						</div>
 						<div>
-							<input type="password" name="credential" class="splash-text" placeholder="Password" maxlength="20"/>
+							<input type="password" name="credential" class="form-element" placeholder="Password" maxlength="20"/>
 						</div>
 						<div>
 							<input type="submit" name="login" class="splash-submit" value="LOGIN" />
@@ -78,7 +78,7 @@ if(isset($_POST['login']))
 			</div>
 		</div>
 		<footer class="footer">
-			<p>2020 Chatattack Inc. A Project by Team Black Friday | TBZ Zürich, AP18b</p>
+			<p>Q4 2020 |  A Project by Team Black Friday | TBZ Zürich | AP18b</p>
 		</footer>
     </body>  
 </html>

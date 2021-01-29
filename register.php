@@ -87,13 +87,13 @@ if(isset($_POST["register"]))
 				<form class="registerform" method="post">
 					<p class="warning"><?php echo $message; ?></p>
 					<div>
-						<input type="text" name="username" class="splash-text" placeholder="Username" maxlength="20"/>
+						<input type="text" name="username" class="form-element" placeholder="Username" maxlength="20"/>
 					</div>
 					<div>
-						<input type="password" name="credential"  class="splash-text" placeholder="Password" maxlength="20"/>
+						<input type="password" name="credential"  class="form-element" placeholder="Password" maxlength="20"/>
 					</div>
 					<div>
-						<input type="password" name="confirm_credential"  class="splash-text" placeholder ="Confirm Password" maxlength="20"/>
+						<input type="password" name="confirm_credential"  class="form-element" placeholder ="Confirm Password" maxlength="20"/>
 					</div>
 					<div>
 						<input type="submit" name="register" class="splash-submit" value="Register" />	
@@ -103,7 +103,7 @@ if(isset($_POST["register"]))
 			</div>
 		</div>
 		<footer class="footer">
-			<p>2020 Chatattack Inc. A Project by Team Black Friday | TBZ Zürich, AP18b</p>
+			<p>Q4 2020 |  A Project by Team Black Friday | TBZ Zürich | AP18b</p>
 		</footer>
     </body>  
 </html>

@@ -1,6 +1,8 @@
 html {
   font-family: Tahoma;
   background-color: black;
+
+  overflow-y: auto;
 }
 
 body > div.splash {
@@ -28,6 +30,12 @@ h1.splash-title {
 div.splash-form-wrapper {
   display: flex;
   justify-content: center;
+
+  margin-top: 2rem;s
+}
+
+div.splash-form-wrapper label {
+  color: yellow;
 }
 
 div.splash-form-wrapper > form {
@@ -38,6 +46,7 @@ div.splash-form-wrapper > form {
   padding: 2rem;
 
   border-radius: 1.5rem;
+
 }
 
 div.splash-form-wrapper > form > div > input {
@@ -46,7 +55,7 @@ div.splash-form-wrapper > form > div > input {
   border-radius: 1rem;
 }
 
-input.splash-text {
+.form-element {
   background-color: transparent;
 
   border-color: #fff;
@@ -181,6 +190,10 @@ div.search-input {
 
 div.search-input > form {
   margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 1rem;
 }
 
 div.search-input > form > input.search-query {
@@ -207,7 +220,25 @@ div.search-input > form > button.search-submit {
   z-index: 0;
 }
 
+div.tab > button:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+div.tab > button:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+div.supplier-details-tab > button:nth-child(2) {
+  border-radius: 0;
+}
+
 footer {
+  height: 50px;
+
+  margin-top: auto;
+
   background: linear-gradient(90deg, rgba(97,0,233,1) 0%, rgba(228,0,224,1) 51%, rgba(15,215,255,1) 100%);
 }
 
@@ -217,3 +248,401 @@ footer > p {
 
   text-align: center;
 }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+#chatbox {
+  overflow-y: hidden;
+  /*background-image: url(/img/chatbackground.svg);*/
+  background-color: #121212;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  width: 100%;
+}
+
+ul.chathistory {
+  /*display: inline-grid;*/
+  display:flex; 
+  flex-direction:column-reverse;
+  text-align:justify; 
+  list-style: none;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+ul.chathistory::-webkit-scrollbar {
+width: 12px;
+}
+
+/* background of the scrollbar except button or resizer */
+ul.chathistory::-webkit-scrollbar-track {
+}
+
+/* scrollbar itself */
+ul.chathistory::-webkit-scrollbar-thumb {
+background-color: #babac0;
+border-radius: 16px;
+}
+
+li.chatmessage {
+  width: 55%;
+  background-color: #03DAC6;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.02rem;
+  padding-bottom: 0.02rem;
+  border-radius: 1.5rem;
+  margin: 1rem;
+
+}
+
+li.chatmessageown {
+  width: 55%;
+  /*justify-self: end;*/
+  align-self: flex-end;
+  background-color: #BB86FC;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.02rem;
+  padding-bottom: 0.02rem;
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+
+li.chatmessage > * {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+li.chatmessageown > * {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+#chatWrapper{
+display: grid;
+grid-template-rows: 1fr auto;
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
+
+#chatform {
+align-self: flex-end;
+display: grid;
+grid-template-columns: 1fr 60px;
+padding: 1rem;
+background-color: #131313;
+margin-bottom: 0;
+}
+
+#messageinput {
+margin-right: 1rem;
+border: none;
+}
+
+#sendbutton {
+background-color: #3700B3;
+border: none;
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+padding-top: 0.02rem;
+padding-bottom: 0.02rem;
+border-radius: 2rem;
+}
+
+#chatform > * {
+padding-top: 1rem;
+padding-bottom: 1rem;
+padding-left: 1rem;
+border-radius: 2rem;
+}
+
+#sendicon {
+padding-right: 7px;
+fill: white;
+}
+
+div.dynamic-bg {
+  background: url("/img/splash_screen_bg_img.gif");
+  background-size: cover;
+}
+
+div.profile {
+  background-color: rgba(0,0,0,0.75);
+
+  padding: 1rem;
+
+  margin-left: 35vw;
+  margin-right: 35vw;
+
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+
+  border-radius: 1rem;
+}
+
+div.profile > h1 {
+  text-align: center;
+
+  color: yellow;
+
+  padding-top: 1rem;
+}
+
+div.profile > div > h4 {
+  text-align: center;
+
+  padding-top: 0.5rem;
+
+  color: #fff;
+}
+
+div.profile-content {
+  background-color: #333;
+
+  border-radius: 1rem;
+
+  width: 16rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form#profile-type-form {
+ 
+}
+
+span.profile-span-white {
+  color: #fff;
+}
+
+// Slider
+
+.form-switch {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.form-switch i {
+  position: relative;
+  display: inline-block;
+  margin-right: .5rem;
+  width: 46px;
+  height: 26px;
+  background-color: #e6e6e6;
+  border-radius: 23px;
+  vertical-align: text-bottom;
+  transition: all 0.3s linear;
+}
+
+.form-switch i::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 42px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+  transition: all 0.25s linear;
+}
+
+.form-switch i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(2px, 2px, 0);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-switch:active i::after {
+  width: 28px;
+  transform: translate3d(2px, 2px, 0);
+}
+
+.form-switch:active input:checked + i::after { transform: translate3d(16px, 2px, 0); }
+
+.form-switch input { display: none; }
+
+.form-switch input:checked + i { background-color: #BB86FC; }
+
+.form-switch input:checked + i::before { transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0); }
+
+.form-switch input:checked + i::after { transform: translate3d(22px, 2px, 0); }
+
+div.user-link-wrapper {
+  display: none;
+}
+
+div.active {
+  display: block;
+}
+
+div.toggle-group {
+  padding: 1.25rem;
+
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+div.toggle-group > button {
+  outline: none;
+
+  padding: 1rem;
+
+  border-style: none;
+
+  color: #fff;
+  background-color: #333;
+}
+
+div.toggle-group > button:first-of-type {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+div.toggle-group > button:last-of-type {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+div.toggle-group > button.toggled {
+  background: linear-gradient(90deg, rgba(97,0,233,1) 0%, rgba(228,0,224,1) 51%, rgba(15,215,255,1) 100%);
+}
+
+div.adminpage {
+  font-family: Tahoma;
+}
+
+table {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.logpage {
+  font-family: Tahoma;
+}
+
+div.adminpage a {
+  background-color: #FF0266;
+  border-radius: 1rem;
+  text-decoration: none;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+div.adminheader {
+  background-color: #333;
+
+  border-radius: 1rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  background-color: #FF0266;
+  border-radius: 1rem;
+  text-decoration: none;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+div.private-chat-blocker {
+  margin-left: 1rem;
+}
+
+div.adminpage a.actionbutton {
+  margin: 1rem;
+}
+
+#table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  color: white;
+}
+
+#table tr {
+    background-color: #333333;
+}
+
+#table td, #table th {
+  border: 3px solid #1F1B24;
+  padding: 8px;
+}
+
+#table tr:nth-child(even){background-color: #131313;}
+
+#table tr:hover {background-color: #1F1B24;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #131313;
+  color: white;
+}
+
+form.adminform input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form.adminform input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form.adminform input[type=submit] {
+  width: 100%;
+  background-color: #FF0266;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
