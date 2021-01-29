@@ -1,0 +1,219 @@
+html {
+  font-family: Tahoma;
+  background-color: black;
+}
+
+body > div.splash {
+  background-image: url('/img/splash_screen_bg_img.gif');
+  background-size: cover;
+  
+  height: 93vh;
+  padding:0;
+  margin:0;
+}
+
+@font-face {
+  font-family: 'cyberpunk';
+  src: url('/public/fonts/Cyberpunk.ttf');
+}
+
+h1.splash-title {
+  color: yellow;
+  font-family: cyberpunk;
+  font-size: 128px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+div.splash-form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+div.splash-form-wrapper > form {
+  display: grid;
+  grid-gap: 1rem;
+  background-color: rgba(0,0,0,0.75);
+
+  padding: 2rem;
+
+  border-radius: 1.5rem;
+}
+
+div.splash-form-wrapper > form > div > input {
+  padding: 1rem;
+
+  border-radius: 1rem;
+}
+
+input.splash-text {
+  background-color: transparent;
+
+  border-color: #fff;
+  border-width: 3px;
+  border-style: solid;
+
+  color: #fff;
+
+  font-family: Tahoma;
+  font-weight: bold;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.splash-submit {
+  color: #000;
+  background-color: yellow;
+  font-family: cyberpunk;
+  font-weight: bold;
+}
+
+a.splash-secondary {
+  color: #fff;
+
+  text-decoration: none;
+  text-align: center;
+
+  font-family: cyberpunk;
+  font-size: 10px;
+
+}
+
+p.error {
+  color: red;
+}
+
+p.warning {
+  color: yellow;
+}
+
+#mainSearchErrorMsg {
+  margin: 1rem;
+}
+
+ul.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222;
+}
+
+li.navigaionitem {
+  float: left;
+  background-color: yellow;
+}
+
+li a.navigationlink {
+display: block;
+color: #000;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a.navigationlink:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    font-family: Tahoma;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+#logoutbutton {
+  float: right;
+  background-color: #FF0266;
+}
+
+#home {
+    display: flex;
+  overflow: hidden;
+  width: 100%;
+
+}
+
+#userlist {
+  background-color: #222;
+  overflow: hidden;
+  width: 20rem;
+}
+
+#userlist ul {
+    padding: 0;
+    margin: 0;
+}
+
+#userlist li {
+  list-style: none;
+  text-decoration: none;
+  background-color: #3700B3;
+}
+
+#userlist a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#userlist li:nth-child(2n) {
+    background-color: #333;
+}
+
+#userlist li:hover {
+  background-color: #1F1B24;
+}
+
+div.search-input {
+  background: #333;
+  display: grid;
+
+  padding: 1.25rem;
+}
+
+div.search-input > form {
+  margin: 0;
+}
+
+div.search-input > form > input.search-query {
+  border: none;
+  color: black;
+  padding: 1rem;
+  border-radius: 2rem;
+
+  width: 80%;
+  z-index: 1;
+
+}
+
+div.search-input > form > button.search-submit {
+  background-color: #3700B3;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 2rem;
+
+  float: right;
+  margin-left: -3rem;
+
+  z-index: 0;
+}
+
+footer {
+  background: linear-gradient(90deg, rgba(97,0,233,1) 0%, rgba(228,0,224,1) 51%, rgba(15,215,255,1) 100%);
+}
+
+footer > p {
+  color: #fff;
+  font-family: Tahoma;
+
+  text-align: center;
+}
